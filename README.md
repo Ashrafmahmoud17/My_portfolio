@@ -1,50 +1,132 @@
+# 🌐 Personal Portfolio — AI Engineer & Data Analyst
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+A modern personal portfolio website built with **React + Vite + TypeScript + Tailwind CSS**, with full Arabic RTL support.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## ⚡ Tech Stack
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+| Technology | Purpose |
+|------------|---------|
+| React 18 | UI framework |
+| TypeScript | Type-safe development |
+| Vite | Fast dev server & bundler |
+| Tailwind CSS | Styling & layout |
+| shadcn/ui | Prebuilt UI components |
+| Cairo & Playfair Display | Google Fonts (Arabic + English) |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js >= 18
+- npm or bun
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/portfolio.git
+cd portfolio
+
+# 2. Install dependencies
+npm install
+# or with bun
+bun install
+
+# 3. Set up environment variables
+cp .env.example .env
+
+# 4. Start the dev server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open your browser at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🏗️ Build for Production
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run build
+```
 
-## What technologies are used for this project?
+Output files will be in the `dist/` folder, ready to deploy.
 
-This project is built with:
+### Preview the production build
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+npm run preview
+```
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## 📁 Project Structure
 
-## Can I connect a custom domain to my Lovable project?
+```
+portfolio/
+├── public/              # Static assets (images, icons)
+├── src/
+│   ├── components/      # React components
+│   ├── pages/           # Page-level components
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # Utilities and helpers
+│   ├── assets/          # Images and static files
+│   └── main.tsx         # App entry point
+├── .env                 # Environment variables (not committed)
+├── index.html           # HTML template
+├── tailwind.config.ts   # Tailwind configuration
+├── vite.config.ts       # Vite configuration
+└── tsconfig.json        # TypeScript configuration
+```
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🌍 Deployment
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Vercel (recommended)
+
+```bash
+npm i -g vercel
+vercel
+```
+
+### Netlify
+
+Drag and drop the `dist/` folder at [netlify.com/drop](https://netlify.com/drop)
+
+### GitHub Pages
+
+```bash
+npm run build
+# Push the contents of dist/ to the gh-pages branch
+```
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+VITE_APP_TITLE=My Portfolio
+VITE_CONTACT_EMAIL=@email.com
+```
+
+
+
+
+## 🎨 Customization
+
+- **Colors** — edit `tailwind.config.ts`
+- **Fonts** — update the `<link>` tags in `index.html`
+- **Content** — edit the component files inside `src/components/`
+- **RTL/LTR** — toggle the `dir` attribute in `index.html`
+
+---
+
+## 📜 License
+
+This project is open source under the [MIT License](LICENSE).
